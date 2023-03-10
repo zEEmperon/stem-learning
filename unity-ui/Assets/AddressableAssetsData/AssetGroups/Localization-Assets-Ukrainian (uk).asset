@@ -10,24 +10,21 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: bbb281ee3bf0b054c82ac2347e9e782c, type: 3}
-  m_Name: Localization-Assets-Shared
+  m_Name: Localization-Assets-Ukrainian (uk)
   m_EditorClassIdentifier: 
-  m_GroupName: Localization-Assets-Shared
+  m_GroupName: Localization-Assets-Ukrainian (uk)
   m_Data:
     m_SerializedData: []
-  m_GUID: 23e9b8147cd72af4bbdfa7ae7e1bc698
+  m_GUID: 6b7be3b99583f514581bc0b3bc39d855
   m_SerializeEntries:
-  - m_GUID: 275306a95b2b7254f8eeef72da92c6ef
-    m_Address: Assets/Localization/Tables/MenuTable Shared Data.asset
+  - m_GUID: 02c4de9276c3fd44eb89ca6f8c6a2742
+    m_Address: ukr_flag_distressed
     m_ReadOnly: 1
-    m_SerializedLabels: []
-  - m_GUID: f30ae48724428754288c77f4906fbf06
-    m_Address: Assets/Localization/Tables/FlagsTable Shared Data.asset
-    m_ReadOnly: 1
-    m_SerializedLabels: []
+    m_SerializedLabels:
+    - Locale-uk
   m_ReadOnly: 1
   m_Settings: {fileID: 11400000, guid: 7f665927525a9734abccb04f4dc4bdda, type: 2}
   m_SchemaSet:
     m_Schemas:
-    - {fileID: 11400000, guid: c33dabd1393ffa24f8c5450eb60a6f81, type: 2}
-    - {fileID: 11400000, guid: de737d326b6d1604099b22fd3bb43f3a, type: 2}
+    - {fileID: 11400000, guid: 54c39570a853d2543bfa862bfa5ac8fa, type: 2}
+    - {fileID: 11400000, guid: f3b61e25987cb6b43809489df98f62f7, type: 2}
