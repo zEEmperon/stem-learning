@@ -975,7 +975,7 @@ GameObject:
   - component: {fileID: 1391646778}
   - component: {fileID: 1391646779}
   m_Layer: 5
-  m_Name: LocaleSelector
+  m_Name: LocaleChanger
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1374,12 +1374,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Padding:
-    m_Left: 150
+    m_Left: 110
     m_Right: 180
     m_Top: 5
     m_Bottom: 5
   m_ChildAlignment: 4
-  m_Spacing: 0
+  m_Spacing: 15
   m_ChildForceExpandWidth: 1
   m_ChildForceExpandHeight: 1
   m_ChildControlWidth: 0
@@ -1453,7 +1453,7 @@ MonoBehaviour:
     m_BestFit: 0
     m_MinSize: 0
     m_MaxSize: 140
-    m_Alignment: 4
+    m_Alignment: 5
     m_AlignByGeometry: 0
     m_RichText: 1
     m_HorizontalOverflow: 0
@@ -1641,7 +1641,19 @@ PrefabInstance:
       objectReference: {fileID: 21300000, guid: 02c4de9276c3fd44eb89ca6f8c6a2742, type: 3}
     - target: {fileID: 6315005290708888059, guid: 9f962ed86c2420c45aa477924177d1e9, type: 3}
       propertyPath: m_Color.a
-      value: 0.83137256
+      value: 0.74509805
+      objectReference: {fileID: 0}
+    - target: {fileID: 6315005290708888059, guid: 9f962ed86c2420c45aa477924177d1e9, type: 3}
+      propertyPath: m_Color.b
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6315005290708888059, guid: 9f962ed86c2420c45aa477924177d1e9, type: 3}
+      propertyPath: m_Color.g
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6315005290708888059, guid: 9f962ed86c2420c45aa477924177d1e9, type: 3}
+      propertyPath: m_Color.r
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 6315005290708888059, guid: 9f962ed86c2420c45aa477924177d1e9, type: 3}
       propertyPath: m_PreserveAspect
