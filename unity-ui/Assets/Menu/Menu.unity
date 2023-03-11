@@ -746,9 +746,8 @@ GameObject:
   m_Component:
   - component: {fileID: 527085040}
   - component: {fileID: 527085039}
-  - component: {fileID: 527085041}
-  - component: {fileID: 527085042}
   - component: {fileID: 527085043}
+  - component: {fileID: 527085044}
   m_Layer: 0
   m_Name: MenuController
   m_TagString: Untagged
@@ -783,36 +782,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &527085041
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 527085038}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7f128f97fc417374a89fff7028c211f1, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  objectsToPlace:
-  - {fileID: 1487772674}
-  - {fileID: 1677913730}
---- !u!114 &527085042
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 527085038}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3865ec4c5a3c4d141a3d3019c3a5845c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  chalkboard: {fileID: 1487772675}
-  shadow: {fileID: 1677913731}
-  animationTime: 1.4
 --- !u!114 &527085043
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -825,6 +794,22 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: abd7eb02eccfddc42aa1b5d6588dc6a8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &527085044
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 527085038}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3865ec4c5a3c4d141a3d3019c3a5845c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  chalkboard: {fileID: 1487772674}
+  chalkboardShadow: {fileID: 1677913730}
+  animationTime: 1.4
+  outsideScreenPosition: 50
 --- !u!224 &586449188 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 6315005290708888057, guid: 9f962ed86c2420c45aa477924177d1e9, type: 3}
