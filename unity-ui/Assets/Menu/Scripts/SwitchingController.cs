@@ -10,7 +10,6 @@ public class SwitchingController : MonoBehaviour
     public GameObject chalkboardShadow2;
     
     public float animationTime = 1.4f;
-    public float outsideScreenOffset = 50;
     public float shadowOffset = 35;
     
     public Vector2 chalkboardPosition = new Vector2(0, 50);
@@ -18,16 +17,13 @@ public class SwitchingController : MonoBehaviour
     void Start()
     {
         PutAwayAllObjects();
-
-        var shadowPosition = new Vector2(chalkboardPosition.x + shadowOffset, chalkboardPosition.y - shadowOffset);
-        
-        MoveObject(chalkboard1, chalkboardPosition);
-        MoveObject(chalkboardShadow1, shadowPosition);
+        MoveChalkboardFromOffRightToCenter(chalkboard1, chalkboardShadow1);
     }
 
     public void ClickPlay()
     {
-        
+        MoveChalkboardFromCenterToOffLeft(chalkboard1, chalkboardShadow1);
+        MoveChalkboardFromOffRightToCenter(chalkboard2, chalkboardShadow2);
     }
 
     public void ClickBack()
@@ -51,6 +47,7 @@ public class SwitchingController : MonoBehaviour
 
     private void PlaceObjectOutsideOfTheScreen(GameObject obj)
     {
+        var outsideScreenOffset = 50;
         var newPosition = obj.transform.position;
         newPosition.x = outsideScreenOffset;
         obj.transform.position = newPosition;
@@ -59,5 +56,26 @@ public class SwitchingController : MonoBehaviour
     private void MoveObject(GameObject obj, Vector2 destination)
     {
         obj.LeanMoveLocal(destination, animationTime).setEaseInOutBack();
+    }
+
+    private void MoveChalkboardFromOffRightToCenter(GameObject chalkboard, GameObject chalkboardShadow)
+    {
+        var shadowPosition = new Vector2(chalkboardPosition.x + shadowOffset, chalkboardPosition.y - shadowOffset);
+        MoveObject(chalkboard, chalkboardPosition);
+        MoveObject(chalkboardShadow, shadowPosition);
+    }
+    
+    private void MoveChalkboardFromCenterToOffLeft(GameObject chalkboard, GameObject chalkboardShadow)
+    {
+        var oldChalkboardPosition = chalkboardPosition;
+        var oldChalkboardShadowPosition = chalkboardShadow.transform.position;
+
+        var xOffset = -10000;
+        
+        var newChalkboardPos = new Vector2(xOffset , oldChalkboardPosition.y);
+        var newChalkboardShadowPos = new Vector2(xOffset, oldChalkboardShadowPosition.y);
+        
+        MoveObject(chalkboard, newChalkboardPos);
+        MoveObject(chalkboardShadow, newChalkboardShadowPos);
     }
 }

@@ -813,7 +813,6 @@ MonoBehaviour:
   chalkboard2: {fileID: 1872513772}
   chalkboardShadow2: {fileID: 764009349}
   animationTime: 1.4
-  outsideScreenOffset: 50
   shadowOffset: 35
   chalkboardPosition: {x: 0, y: 50}
 --- !u!224 &586449188 stripped
@@ -1941,7 +1940,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 3151830a7d69e614b980abb2da631441, type: 3}
+  m_Sprite: {fileID: 21300000, guid: d19d189bb9068414c9d79f93de385e8c, type: 3}
   m_Type: 1
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -2061,6 +2060,34 @@ PrefabInstance:
     - target: {fileID: 6315005290708888057, guid: 9f962ed86c2420c45aa477924177d1e9, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6315005290708888058, guid: 9f962ed86c2420c45aa477924177d1e9, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6315005290708888058, guid: 9f962ed86c2420c45aa477924177d1e9, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6315005290708888058, guid: 9f962ed86c2420c45aa477924177d1e9, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 527085044}
+    - target: {fileID: 6315005290708888058, guid: 9f962ed86c2420c45aa477924177d1e9, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 6315005290708888058, guid: 9f962ed86c2420c45aa477924177d1e9, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: ClickPlay
+      objectReference: {fileID: 0}
+    - target: {fileID: 6315005290708888058, guid: 9f962ed86c2420c45aa477924177d1e9, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: SwitchingController, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 6315005290708888058, guid: 9f962ed86c2420c45aa477924177d1e9, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
       objectReference: {fileID: 0}
     - target: {fileID: 6315005290708888059, guid: 9f962ed86c2420c45aa477924177d1e9, type: 3}
       propertyPath: m_Type
