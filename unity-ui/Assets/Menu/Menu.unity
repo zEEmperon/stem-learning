@@ -360,7 +360,7 @@ GameObject:
   - component: {fileID: 128619908}
   - component: {fileID: 128619907}
   m_Layer: 5
-  m_Name: Learning
+  m_Name: LearningLabel
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -812,7 +812,7 @@ MonoBehaviour:
   chalkboardShadow1: {fileID: 1677913730}
   chalkboard2: {fileID: 1872513772}
   chalkboardShadow2: {fileID: 764009349}
-  animationTime: 1.4
+  animationTime: 2
   shadowOffset: 35
   chalkboardPosition: {x: 0, y: 50}
 --- !u!224 &586449188 stripped
@@ -1000,7 +1000,7 @@ GameObject:
   - component: {fileID: 855883632}
   - component: {fileID: 855883631}
   m_Layer: 5
-  m_Name: ChooseStage
+  m_Name: ChooseSubjectLabel
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1023,7 +1023,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: -0.614}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 74.100006, y: -245.07828}
+  m_AnchoredPosition: {x: 74.09985, y: -245.07825}
   m_SizeDelta: {x: -363.5, y: 421.3}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &855883631
@@ -1099,7 +1099,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Choose the stage
+  m_Text: Choose the subject
 --- !u!222 &855883633
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -1822,7 +1822,7 @@ GameObject:
   - component: {fileID: 1815085908}
   - component: {fileID: 1815085910}
   m_Layer: 5
-  m_Name: Language
+  m_Name: LanguageLabel
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

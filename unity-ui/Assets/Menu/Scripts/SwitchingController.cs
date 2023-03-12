@@ -9,26 +9,32 @@ public class SwitchingController : MonoBehaviour
     public GameObject chalkboard2;
     public GameObject chalkboardShadow2;
     
-    public float animationTime = 1.4f;
+    public float animationTime = 2f;
     public float shadowOffset = 35;
     
     public Vector2 chalkboardPosition = new Vector2(0, 50);
 
+    private Vector2 _shadowPosition;
+    private float _xOffset = 10000;
+
     void Start()
     {
+        _shadowPosition = new Vector2(chalkboardPosition.x + shadowOffset, chalkboardPosition.y - shadowOffset);
+        
         PutAwayAllObjects();
-        MoveChalkboardFromOffRightToCenter(chalkboard1, chalkboardShadow1);
+        MoveChalkboardToCenter(chalkboard1, chalkboardShadow1);
     }
 
     public void ClickPlay()
     {
-        MoveChalkboardFromCenterToOffLeft(chalkboard1, chalkboardShadow1);
-        MoveChalkboardFromOffRightToCenter(chalkboard2, chalkboardShadow2);
+        MoveChalkboardOutTheCenter(chalkboard1, chalkboardShadow1, -_xOffset);
+        MoveChalkboardToCenter(chalkboard2, chalkboardShadow2);
     }
 
     public void ClickBack()
     {
-        
+        MoveChalkboardOutTheCenter(chalkboard2, chalkboardShadow2, _xOffset);
+        MoveChalkboardToCenter(chalkboard1, chalkboardShadow1);
     }
 
     private void PutAwayAllObjects()
@@ -58,20 +64,17 @@ public class SwitchingController : MonoBehaviour
         obj.LeanMoveLocal(destination, animationTime).setEaseInOutBack();
     }
 
-    private void MoveChalkboardFromOffRightToCenter(GameObject chalkboard, GameObject chalkboardShadow)
+    private void MoveChalkboardToCenter(GameObject chalkboard, GameObject chalkboardShadow)
     {
-        var shadowPosition = new Vector2(chalkboardPosition.x + shadowOffset, chalkboardPosition.y - shadowOffset);
         MoveObject(chalkboard, chalkboardPosition);
-        MoveObject(chalkboardShadow, shadowPosition);
+        MoveObject(chalkboardShadow, _shadowPosition);
     }
-    
-    private void MoveChalkboardFromCenterToOffLeft(GameObject chalkboard, GameObject chalkboardShadow)
+
+    private void MoveChalkboardOutTheCenter(GameObject chalkboard, GameObject chalkboardShadow, float xOffset)
     {
         var oldChalkboardPosition = chalkboardPosition;
         var oldChalkboardShadowPosition = chalkboardShadow.transform.position;
 
-        var xOffset = -10000;
-        
         var newChalkboardPos = new Vector2(xOffset , oldChalkboardPosition.y);
         var newChalkboardShadowPos = new Vector2(xOffset, oldChalkboardShadowPosition.y);
         
