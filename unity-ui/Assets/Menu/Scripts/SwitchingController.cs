@@ -3,8 +3,11 @@ using UnityEngine;
 
 public class SwitchingController : MonoBehaviour
 {
-    public GameObject chalkboard;
-    public GameObject chalkboardShadow;
+    public GameObject chalkboard1;
+    public GameObject chalkboardShadow1;    
+    
+    public GameObject chalkboard2;
+    public GameObject chalkboardShadow2;
     
     public float animationTime = 1.4f;
     public float outsideScreenOffset = 50;
@@ -18,8 +21,8 @@ public class SwitchingController : MonoBehaviour
 
         var shadowPosition = new Vector2(chalkboardPosition.x + shadowOffset, chalkboardPosition.y - shadowOffset);
         
-        MoveObject(chalkboard, chalkboardPosition);
-        MoveObject(chalkboardShadow, shadowPosition);
+        MoveObject(chalkboard1, chalkboardPosition);
+        MoveObject(chalkboardShadow1, shadowPosition);
     }
 
     public void ClickPlay()
@@ -36,7 +39,8 @@ public class SwitchingController : MonoBehaviour
     {
         var objects = new List<GameObject>
         {
-            chalkboard, chalkboardShadow
+            chalkboard1, chalkboardShadow1,
+            chalkboard2, chalkboardShadow2
         };
 
         foreach (var o in objects)
