@@ -19,6 +19,10 @@ MonoBehaviour:
     m_Key: Menu.Language
     m_Metadata:
       m_Items: []
+  - m_Id: 753776206462976
+    m_Key: Menu.ChooseStage
+    m_Metadata:
+      m_Items: []
   m_Metadata:
     m_Items: []
   m_KeyGenerator:
