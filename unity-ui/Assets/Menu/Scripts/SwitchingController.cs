@@ -3,16 +3,16 @@ using UnityEngine;
 
 public class SwitchingController : MonoBehaviour
 {
-    public GameObject chalkboard1;
-    public GameObject chalkboardShadow1;    
+    [SerializeField] private GameObject chalkboard1;
+    [SerializeField] private GameObject chalkboardShadow1;    
     
-    public GameObject chalkboard2;
-    public GameObject chalkboardShadow2;
+    [SerializeField] private GameObject chalkboard2;
+    [SerializeField] private GameObject chalkboardShadow2;
     
-    public float animationTime = 2f;
-    public float shadowOffset = 35;
+    [SerializeField] private float animationTime = 2f;
+    [SerializeField] private float shadowOffset = 35;
     
-    public Vector2 chalkboardPosition = new Vector2(0, 50);
+    [SerializeField] private Vector2 chalkboardPosition = new Vector2(0, 50);
 
     private Vector2 _shadowPosition;
     private float _xOffset = 10000;

@@ -3,26 +3,27 @@ using UnityEngine;
 
 public class HoverAnimation : MonoBehaviour
 {
-    private Vector3 originalScale;
-    public float scaleAmount = 1.1f; 
-    public float lerpSpeed = 10f;
+    [SerializeField] private float scaleAmount = 1.1f; 
+    [SerializeField] private float lerpSpeed = 10f;
+    
+    private Vector3 _originalScale;
 
     void Start()
     {
-        originalScale = transform.localScale; 
+        _originalScale = transform.localScale; 
     }
 
     public void OnPointerEnter()
     {
         StopAllCoroutines(); 
-        StartCoroutine(LerpScale(originalScale, originalScale * scaleAmount));
+        StartCoroutine(LerpScale(_originalScale, _originalScale * scaleAmount));
 
     }
 
     public void OnPointerExit()
     {
         StopAllCoroutines();
-        StartCoroutine(LerpScale(transform.localScale, originalScale));
+        StartCoroutine(LerpScale(transform.localScale, _originalScale));
     }
     
     private IEnumerator LerpScale(Vector3 startScale, Vector3 endScale)
